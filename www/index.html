@@ -35,39 +35,49 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
+
     <link rel="stylesheet" href="css/index.css">
+
     <title>Hello World</title>
 </head>
 
 <body>
     <div class="app">
-        <div>
-            <p>70% of Wednesday has passed</p>
-            <progress value="70" max="100">70%
+        
+       
+
+        <div id="day">
+            <p><span class="percentage">0</span>% of <span class="day"></span> has passed</p>
+            <progress value="0" max="100">
 
             </progress>
         </div>
-        <div>
-            <p>70% of the week has passed</p>
-            <progress value="70" max="100">70%
+
+        <div id="week">
+            <p> <span class="percentage">0</span>% of the week has passed</p>
+            <progress value="0" max="100">
 
             </progress>
         </div>
-        <div>
-            <p>70% of September has passed</p>
-            <progress value="70" max="100">70%
+
+        <div id="month">
+            <p><span class="percentage">0</span>% of <span class="month"></span> has passed</p>
+            <progress value="0" max="100">
 
             </progress>
         </div>
-        <div>
-            <p>70% of 2022 has passed</p>
-            <progress value="70" max="100">70%
+
+        <div id="year">
+            <p><span class="percentage">0</span>% of <span class="year"></span> has passed</p>
+            <progress value="0" max="100">
 
             </progress>
         </div>
+
     </div>
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/modules/elapsed.js"></script>
 </body>
 
 </html>

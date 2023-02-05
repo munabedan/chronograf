@@ -16,12 +16,80 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+/* jetbrains-mono-regular - latin */
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    
+    src: local(''),
+        
+        /* Modern Browsers */
+        url('../fonts/JetBrainsMono-Regular.ttf') format('truetype'),
+        
+}
+
+
 * {}
 
-body {}
+body {
+    
+    font-family: "JetBrains Mono", monospace;
+    font-size: 22px;
+    font-weight: 700;
+    
+
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 50px;
+
+    /*make background color #343434*/
+    background-color: #343434;
+
+    /*border 3px color #2e302d*/
+    border: 3px solid #2e302d;
+
+    /*shadow #dcdcdc 5px*/
+    box-shadow: 10px 10px 10px #dcdcdc;
+
+
+}
+
+progress::-webkit-progress-bar {
+    background-color: #343434;
+    
+}
+
+progress::-webkit-progress-value {
+    background-color: #03fe33;
+    
+}
+
+progress::-moz-progress-bar {
+    background-color: #03fe33;
+
+  
+   
+}
 
 /* Portrait layout (default) */
-.app {}
+.app {
+
+    /*margin 20px*/
+    margin: 20px;
+
+    /*center vertically*/
+    display: flex;
+    flex-direction: column;
+    
+
+
+
+}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
