@@ -76,6 +76,13 @@ progress::-moz-progress-bar {
    
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
 /* Portrait layout (default) */
 .app {
 
