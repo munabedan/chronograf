@@ -4,7 +4,7 @@ const getPercentageDayElapsed = () => {
     var pctDayElapsed = (d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds() + d.getMilliseconds() / 1000) / 86400;
 
     console.log("percentageDayElapsed:", pctDayElapsed * 100)
-    return (pctDayElapsed * 100).toFixed()
+    return (pctDayElapsed * 100).toFixed(1)
 }
 
 
@@ -31,26 +31,26 @@ const getPercentageWeekElapsed = () => {
 
     pctWeekElapsed = timeElapsed / totalTime
     console.log("pctWeekElapsed", pctWeekElapsed * 100)
-    return (pctWeekElapsed * 100).toFixed()
+    return (pctWeekElapsed * 100).toFixed(1)
 
 
 }
 
 //get day of the month expressed as a percentage
-
 const getPercentageMonthElapsed = () => {
-    var today = new Date();
-    var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+    const today = new Date();
+    const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+    const nextMonthFirstDay = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+    const totalDaysInMonth = Math.floor((nextMonthFirstDay - firstDay) / (1000 * 60 * 60 * 24)); // Calculate days in the current month
 
-    timeElapsed = (today - firstDay) / 1000
-    totalTime = 2628288
+    const currentDate = today.getDate();
 
-    pctMonthElapsed = timeElapsed / totalTime
+    const pctMonthElapsed = (currentDate / totalDaysInMonth) * 100;
 
-    console.log("pctMonthElapsed", pctMonthElapsed * 100)
-    return (pctMonthElapsed * 100).toFixed()
-
+    console.log("pctMonthElapsed", pctMonthElapsed);
+    return pctMonthElapsed.toFixed(1); // Return the percentage rounded to 2 decimal places
 }
+
 
 
 
@@ -65,7 +65,7 @@ const getPercentageYearElapsed = () => {
     pctYearElapsed = timeElapsed / totalTime
 
     console.log("pctYearElapsed", pctYearElapsed * 100)
-    return (pctYearElapsed * 100).toFixed()
+    return (pctYearElapsed * 100).toFixed(1)
 
 }
 
