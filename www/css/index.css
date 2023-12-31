@@ -157,3 +157,42 @@ progress::-moz-progress-bar {
 .social-link:hover::before {
   opacity: 1; 
 }
+
+
+/* Style for the banner */
+.addToHomeScreenBanner {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-top: 1px solid #ccc; /* Adding a top border for separation */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center; /* Center align content */
+}
+
+.addToHomeScreenBanner p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.addToHomeScreenBanner button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the button hover effect */
+.addToHomeScreenBanner button:hover {
+  background-color: #0056b3;
+}
